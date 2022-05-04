@@ -1,3 +1,22 @@
-<div>
-
+<div class="container">
+  <div class="header">
+    <button type="button" (click)="showAverage()">
+      Style
+    </button>
+  </div>
+  <div class="contracts">
+    <ng-container *ngFor="let item of (items$ | async) | keyvalue">
+      <div class="contracts__contract">
+        <div>
+          {{item.value.name}}
+        </div>
+        <div>
+          <!-- {{item.price}} -->
+        </div>
+        <div [style.visibility]="isVisibleAverage ? 'visible' : 'hidden '">
+          <!-- {{item.volume}} -->
+        </div>
+      </div>
+    </ng-container>
+  </div>
 </div>

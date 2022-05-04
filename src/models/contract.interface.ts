@@ -6,6 +6,6 @@
  */
 export interface Contract {
   id: string;
-  name: string;
+  name?: string;
   removed?: boolean;
 }
